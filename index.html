@@ -3,17 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AL 3RAB BOT - البوت الرسمي</title>
+    <title>AL 3RAB BOT</title>
     <style>
-        :root {
-            --primary-color: #0088cc;
-            --hover-color: #006699;
-            --bg-dark: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -22,143 +13,101 @@
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            min-height: 100vh;
+            background-color: #0d1117;
+            color: #c9d1d9;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             padding: 20px;
+            text-align: center;
         }
 
         .container {
-            background-color: var(--card-bg);
-            border-radius: 24px;
-            padding: 40px 30px;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 16px;
+            padding: 40px 24px;
+            max-width: 420px;
             width: 100%;
-            max-width: 500px;
-            text-align: center;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
-            border: 1px solid #334155;
-        }
-
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: rgba(34, 197, 94, 0.1);
-            color: #4ade80;
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #22c55e;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
         .bot-logo {
-            width: 96px;
-            height: 96px;
-            background: linear-gradient(135deg, #0088cc, #00b4d8);
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 36px;
-            font-weight: bold;
-            box-shadow: 0 0 20px rgba(0, 136, 204, 0.4);
+            font-size: 64px;
+            margin-bottom: 16px;
         }
 
         h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            letter-spacing: 0.5px;
+            color: #ffffff;
+            font-size: 26px;
+            margin-bottom: 8px;
         }
 
         .username {
-            color: var(--primary-color);
-            font-size: 16px;
-            margin-bottom: 24px;
+            display: inline-block;
+            background-color: #21262d;
+            color: #58a6ff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
             direction: ltr;
-            display: block;
         }
 
         p {
-            color: var(--text-muted);
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.6;
-            margin-bottom: 32px;
+            margin-bottom: 12px;
+            color: #8b949e;
+        }
+
+        p b {
+            color: #c9d1d9;
         }
 
         .btn-launch {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background-color: var(--primary-color);
-            color: white;
+            display: block;
+            background-color: #24A1DE;
+            color: #ffffff;
             text-decoration: none;
-            padding: 16px 32px;
-            border-radius: 14px;
-            font-size: 18px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 136, 204, 0.2);
+            padding: 14px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 24px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .btn-launch:hover {
-            background-color: var(--hover-color);
+            background-color: #1a82b8;
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 136, 204, 0.3);
-        }
-
-        .btn-launch:active {
-            transform: translateY(0);
         }
 
         .footer-note {
-            margin-top: 24px;
             font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+            color: #6e7681;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- شارة المتصل -->
-        <div class="status-badge">
-            <span class="status-dot"></span>
-            🔥 متصل الآن وجاهز
-        </div>
-
         <!-- الشعار البرمجي للبوت -->
         <div class="bot-logo">🤖</div>
 
         <!-- العناوين -->
         <h1>AL 3RAB BOT</h1>
         <span class="username">@Al3Rab_IchanyBot</span>
-        
-        <p>انتقل إلى البوت الرسمي فوراً لتشغيل الخدمات السريعة بدون إعلانات أو فترات انتظار. إذا كان لديك تطبيق <b>تليجرام</b>، يمكنك تشغيله مباشرة الآن.</p>
+
+        <p>انتقل إلى البوت الرسمي فوراً للحصول على الخدمات بدون إعلانات أو فترات انتظار.</p>
+        <p><b>يمكنك دخوله مباشرة الآن:</b></p>
 
         <!-- زر الانتقال الفوري مع رابط الإحالة الخاص بك -->
-        <a href="https://t.me" class="btn-launch" target="_blank">
-            اضغط هنا لفتح البوت عبر تليجرام 🚀
+        <a href="https://t.me/Al3Rab_IchanyBot?start=2048037478" class="btn-launch" target="_blank">
+            اضغط هنا لفتح البوت عبر تليجرام
         </a>
 
         <div class="footer-note">
